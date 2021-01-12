@@ -3,14 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
+    <title>SCA-OAU Mentorship Feedback Survey</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <div class="container">
-        <header></header>
+        <header class="header">
+            <h1 id="title">SCA-OAU Mentorship Survey Form</h1>
+            <p id="description" class="desc-text">
+                SCA-OAU Mentorship program was scheduled for six weeks in which various mentees were assigned 
+                mentors to walk them through their various chosen career path. This survey is aimed at getting feedback on the 
+                mentorship program to help the organisation improve in its mentoring capabilities. Thank you for taking out 
+                time to fill this form.
+            </p>
+        </header>
 
-        <form action="">
+        <form id="survey-form">
+            <div class="form-details">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" name="name" class="form-essential" required>
+            </div>
+
+            <div class="form-details">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" class="form-essential" required>
+            </div>
+
+            <div class="form-details">
+                <label for="phone" id="phone-label">Whatsapp Number</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter your mobile number" class="form-essential" required>
+            </div>
+
+            <div class="form-details">
+                <label for="number" id="number-label">Age <span class="hint"> (optional)</span></label>
+                <input type="number" name="number" id="number" min="15" max="99" placeholder="Age" class="form-essential" class="form-essential">
+            </div>
+
+            <div class="form-details">
+                <label for="dropdown">Which Mentoring path did you apply for?</label>
+                <select name="dropdown" id="dropdown" class="form-essential">
+                    <option disable selected value>Select your path</option>
+                    <option value="Front-end">Front-end Web development</option>
+                    <option value="Back-end">Back-end Web development</option>
+                    <option value="Full-stack">Full-stack Web development</option>
+                    <option value="Flutter">Flutter</option>
+                    <option value="Android">Android Development</option>
+                </select>
+            </div>
+
+            <div class="form-details">
+                <fieldset>
+                    <legend>How would you rate the mentorship program?</legend>
+                    <label for="very-good"><input type="radio" name="program" id="very-good" value="Very Good" class="input-radio" 
+                        checked>Very Good</label><br>
+                    <label for="good"><input type="radio" id="good" name="program" value="Good" class="input-radio">Good</label><br>
+                    <label for="fair"><input type="radio" name="program" id="fair" value="Fair" class="input-radio">Fair</label><br>
+                    <label for="bad"><input type="radio" name="program" id="bad" value="Bad" class="input-radio">Bad</label><br>
+                    <label for="very-bad"><input type="radio" name="program" id="very-bad" value="Very Bad" class="input-radio">
+                        Very Bad</label>
+                </fieldset>
+            </div>
+
+            <div class="form-details">
+                <fieldset>
+                    <legend>Do you feel you have improved your skill in your chosen field?</legend>
+                    <label for="yes"><input type="radio" name="skills" id="yes" value="Yes" checked class="input-radio">Yes</label><br>
+                    <label for="no"><input type="radio" name="skills" id="no" value="No" class="input-radio">No</label><br>
+                    <label for="maybe"><input type="radio" name="skills" id="maybe" value="Maybe" class="input-radio">Maybe</label>
+                </fieldset>
+            </div>
             
+            <div class="form-details">
+                <fieldset>
+                    <legend>Would you recommend SCA-OAU to a newbie interested in tech?</legend>
+                    <label for="definitely"><input type="radio" name="recommend" id="definitely" value="Definitely" class="input-radio" checked>
+                        Definitely</label><br>
+                    <label for="maybe"><input type="radio" name="recommend" id="maybe" value="Maybe" class="input-radio">Maybe</label><br>
+                    <label for="not-sure"><input type="radio" name="recommend" id="not-sure" value="Not Sure" class="input-radio">Not Sure</label>
+                </fieldset>
+            </div>
+
+            <div class="form-details">
+                <fieldset>
+                    <legend>What would you like improved in the next mentorship program? <span class="clue">
+                        (Tick all that apply)</span></legend>
+                    <label for="programming"><input type="checkbox" name="improvements" id="programming" value="More Programming Languages" 
+                        class="input-tick">More Programming Languages</label><br>
+                    <label for="in-house"><input type="checkbox" name="improvements" id="in-house" value="In-house lessons" class="input-tick">
+                        In-house lessons</label><br>
+                    <label for="projects"><input type="checkbox" name="improvements" id="Projects" value="Projects" class="input-tick">
+                        Projects</label><br>
+                    <label for="frameworks"><input type="checkbox" name="improvements" id="frameworks" value="Frameworks taught" 
+                        class="input-tick">Frameworks taught</label><br>
+                    <label for="team-building"><input type="checkbox" name="improvements" id="team-building" value="Team building" 
+                        class="input-tick">Team Building</label>
+                </fieldset>
+            </div>
+            
+            <div class="form-details">
+                <p>Do you have any comments or suggestions for us?</p>
+                <textarea name="comments" id="user-comments" placeholder="Enter your comments and suggestions here..."
+                class="input-text"></textarea>
+            </div>
+
+            <div class="form-details">
+                <button type="submit" id="submit" class="submit-btn">Submit</button>
+            </div>
         </form>
     </div>
 </body>
